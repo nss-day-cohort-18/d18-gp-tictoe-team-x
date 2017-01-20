@@ -14,10 +14,22 @@
 	border: 3px solid #000;
 }
 
-.hidden {
+/*.hidden {
 	display: none;
 }
 
 .visible {
 	display: block;
+}*/
+
+.x {
+	background-image: url("../images/X.png");
+	background-repeat: no-repeat;
+	background-size: 10em 10em;
+	
+}
+.o {
+	background-image: url("../images/O.png");
+	background-repeat: no-repeat;
+	background-size: 10em 10em;
 }
