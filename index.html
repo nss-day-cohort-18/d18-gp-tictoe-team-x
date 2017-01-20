@@ -8,32 +8,38 @@
 <body class="body-container">
 	<h1>Let's Play Tic-Tac-Toe!</h1>
 	<aside>(X's always go first)</aside>
-	<div class="container">
-		<section id="1" class="card ">
-		</section>
-		<section id="2" class="card">
-		</section>
-		<section id="3" class="card">
-		</section>
+	<div class="body-container" id="menu">
+		<h3>Would you like to play singleplayer or multiplayer?</h3>
+		<button type="button" id="singleButton">Singleplayer</button>
+		<button type="button" id="multiButton">Multiplayer</button>
 	</div>
-	<div class="container">
-		<section id="4" class="card">
-		</section>
-		<section id="5" class="card">
-		</section>
-		<section id="6" class="card">
-		</section>
+	<div class="body-container hidden" id="playView">
+		<div class="container">
+			<section id="1" class="card ">
+			</section>
+			<section id="2" class="card">
+			</section>
+			<section id="3" class="card">
+			</section>
+		</div>
+		<div class="container">
+			<section id="4" class="card">
+			</section>
+			<section id="5" class="card">
+			</section>
+			<section id="6" class="card">
+			</section>
+		</div>
+		<div class="container">
+			<section id="7" class="card">
+			</section>
+			<section id="8" class="card">
+			</section>
+			<section id="9" class="card">
+			</section>
+		</div>
+		<button type="button" id="playButton">Play Again!</button>
 	</div>
-	<div class="container">
-		<section id="7" class="card">
-		</section>
-		<section id="8" class="card">
-		</section>
-		<section id="9" class="card">
-		</section>
-	</div>
-	<button type="button" id="playButton">Play Again!</button>
-
 <script type="text/javascript" src="js/tictoe.js"></script>
 </body>
 </html>
