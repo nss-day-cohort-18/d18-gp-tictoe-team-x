@@ -1,0 +1,15 @@
+.body-container {
+	margin-top: 3em;
+}
+
+.container {
+	display: flex;
+	flex-flow: row nowrap;
+	margin-left: 25%;
+}
+
+.card {
+	height: 10em;
+	width: 10em;
+	border: 3px solid #000;
+}
