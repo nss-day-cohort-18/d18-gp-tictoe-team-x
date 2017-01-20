@@ -29,7 +29,7 @@ function handleClass(event) {
     [1, 5, 9],
     [3, 5, 7]
 ]; */
-function winloseLogic ()
+function winloseLogic () {
 	// grab Elements and name 
 	var c1 = document.getElementById("1");
 	var c2 = document.getElementById("2");
@@ -47,3 +47,5 @@ function winloseLogic ()
 	if (c1.classList.contains(x) && c4.classList.contains(x) && c7.classList.contains(x)) {
 		alert("you won");
 	}
+}
+
