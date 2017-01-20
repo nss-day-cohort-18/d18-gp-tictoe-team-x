@@ -13,3 +13,11 @@
 	width: 10em;
 	border: 3px solid #000;
 }
+
+.hidden {
+	display: none;
+}
+
+.visible {
+	display: block;
+}
