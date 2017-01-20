@@ -1,4 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
 .body-container {
+	font-family: 'Open Sans',serif;
 	margin-top: 3em;
 }
 
@@ -33,3 +36,4 @@
 	background-repeat: no-repeat;
 	background-size: 10em 10em;
 }
+
