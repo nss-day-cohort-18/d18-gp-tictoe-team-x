@@ -10,4 +10,11 @@ for (i = 0; i < card.length; i++) {
 }
 
 function handleClass(event) {
+	turn++;
+	console.log(this);
+	if (turn%2 !== 0) {
+		this.classList.add("x");
+	} else {
+		this.classList.add("o");
+	}
 }
