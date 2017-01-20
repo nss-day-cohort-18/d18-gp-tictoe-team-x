@@ -12,10 +12,16 @@ for (i = 0; i < card.length; i++) {
 function handleClass(event) {
 	turn++;
 	console.log(this);
-		if (turn%2 !== 0) {
+	if (this.classList.contains("filled")) {
+		alert("THIS SPACE IS TAKEN! CLICK SOMEWHERE ELSE!!!");
+		turn--;
+	}
+	else if (turn%2 !== 0) {
 		this.classList.add("x");
+		this.classList.add("filled");
 	} else {
 		this.classList.add("o");
+		this.classList.add("filled");
 	}
 	winloseLogic();
 }
