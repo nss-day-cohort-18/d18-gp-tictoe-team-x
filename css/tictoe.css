@@ -1,11 +1,15 @@
 .body-container {
 	margin-top: 3em;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
 }
 
 .container {
 	display: flex;
 	flex-flow: row nowrap;
-	margin-left: 25%;
+
 }
 
 .card {
@@ -14,13 +18,19 @@
 	border: 3px solid #000;
 }
 
-/*.hidden {
-	display: none;
+.button-container {
+	display: flex;
+	flex-direction: column;
 }
 
-.visible {
-	display: block;
-}*/
+button {
+	height: 3em;
+	margin-top: 2em;
+	padding-left: 4em;
+	padding-right: 4em;
+	text-align: center;
+
+}
 
 .x {
 	background-image: url("../images/X.png");
