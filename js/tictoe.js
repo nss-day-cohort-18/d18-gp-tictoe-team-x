@@ -55,69 +55,53 @@ function winloseLogic() {
 // X 
 	if (c1.classList.contains(x) && c4.classList.contains(x) && c7.classList.contains(x)) {
 		alert("X You Won!");
-		window.location.reload();
 	}
 	if (c2.classList.contains(x) && c5.classList.contains(x) && c8.classList.contains(x)) {
 		alert("X You Won!");
-		window.location.reload();
 	}
 	if (c3.classList.contains(x) && c6.classList.contains(x) && c9.classList.contains(x)) {
 		alert("X You Won!");
-		window.location.reload();
 	}
 	if (c1.classList.contains(x) && c2.classList.contains(x) && c3.classList.contains(x)) {
 		alert("X You Won!");
-		window.location.reload();
 	}
 	if (c4.classList.contains(x) && c5.classList.contains(x) && c6.classList.contains(x)) {
 		alert("X You Won!");
-		window.location.reload();
 	}
 	if (c7.classList.contains(x) && c8.classList.contains(x) && c9.classList.contains(x)) {
 		alert("X You Won!");
-		window.location.reload();
 	}
 	if (c1.classList.contains(x) && c5.classList.contains(x) && c9.classList.contains(x)) {
 		alert("X You Won!");
-		window.location.reload();
 	}
 	if (c3.classList.contains(x) && c5.classList.contains(x) && c7.classList.contains(x)) {
 		alert("X You Won!");
-		window.location.reload();
 	}
 
 // o check
 	if (c1.classList.contains(o) && c4.classList.contains(o) && c7.classList.contains(o)) {
 		alert("O You Won!");
-		window.location.reload();
 	}
 	if (c2.classList.contains(o) && c5.classList.contains(o) && c8.classList.contains(o)) {
 		alert("O You Won!");
-		window.location.reload();
 	}
 	if (c3.classList.contains(o) && c6.classList.contains(o) && c9.classList.contains(o)) {
 		alert("O You Won!");
-		window.location.reload();
 	}
 	if (c1.classList.contains(o) && c2.classList.contains(o) && c3.classList.contains(o)) {
 		alert("O You Won!");
-		window.location.reload();
 	}
 	if (c4.classList.contains(o) && c5.classList.contains(o) && c6.classList.contains(o)) {
 		alert("O You Won!");
-		window.location.reload();
 	}
 	if (c7.classList.contains(o) && c8.classList.contains(o) && c9.classList.contains(o)) {
 		alert("O You Won!");
-		window.location.reload();
 	}
 	if (c1.classList.contains(o) && c5.classList.contains(o) && c9.classList.contains(o)) {
 		alert("O You Won!");
-		window.location.reload();
 	}
 	if (c3.classList.contains(o) && c5.classList.contains(o) && c7.classList.contains(o)) {
 		alert("O You Won!");
-		window.location.reload();
 	}
 
 	if ( turn == 9 ) {
@@ -125,4 +109,24 @@ function winloseLogic() {
 	}
 
 }
+
+var playButton = document.getElementById("playButton")
+
+playButton.addEventListener("click", handleReload)
+
+
+function handleReload (e) {
+	window.location.reload();
+}
+
+
+
+
+
+
+
+
+
+
+
 
