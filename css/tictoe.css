@@ -1,15 +1,31 @@
 .body-container {
-	margin-top: 3em;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
 	align-items: center;
+	background-color: #b4e7a2
 }
 
 .container {
 	display: flex;
 	flex-flow: row nowrap;
 
+}
+
+h1 {
+	font-family: 'Trocchi', serif;
+	font-size: 3em;
+	margin-top: .5em;
+	padding-bottom: 0;
+}
+
+aside {
+	font-family: 'Trocchi', serif;
+	font-size: 1em;
+	margin-bottom: .5em;
+	padding-top: 0;
+	margin-top: -1.5em;
+	color: #3f3f3f;
 }
 
 .card {
