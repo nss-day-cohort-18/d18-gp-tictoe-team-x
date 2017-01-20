@@ -12,11 +12,12 @@ for (i = 0; i < card.length; i++) {
 function handleClass(event) {
 	turn++;
 	console.log(this);
-	if (turn%2 !== 0) {
+		if (turn%2 !== 0) {
 		this.classList.add("x");
 	} else {
 		this.classList.add("o");
 	}
+	winloseLogic();
 }
 
 /* var winningCombo = [
@@ -29,7 +30,8 @@ function handleClass(event) {
     [1, 5, 9],
     [3, 5, 7]
 ]; */
-function winloseLogic () {
+
+function winloseLogic() {
 	// grab Elements and name 
 	var c1 = document.getElementById("1");
 	var c2 = document.getElementById("2");
@@ -41,11 +43,17 @@ function winloseLogic () {
 	var c8 = document.getElementById("8");
 	var c9 = document.getElementById("9");
 	var x = "x";
-	var o = "o;"
+	var o = "o";
 
 // X 
 	if (c1.classList.contains(x) && c4.classList.contains(x) && c7.classList.contains(x)) {
 		alert("you won");
 	}
+// O
+	if (c1.classList.contains(o) && c4.classList.contains(o) && c7.classList.contains(o)) {
+		alert("you won");
+	}
+
+
 }
 
