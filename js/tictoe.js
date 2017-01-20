@@ -58,55 +58,55 @@ function handleMulti (e) {
 		if (c1.classList.contains(x) && c4.classList.contains(x) && c7.classList.contains(x)) {
 			alert("X You Won!");
 		}
-		if (c2.classList.contains(x) && c5.classList.contains(x) && c8.classList.contains(x)) {
+		else if (c2.classList.contains(x) && c5.classList.contains(x) && c8.classList.contains(x)) {
 			alert("X You Won!");
 		}
-		if (c3.classList.contains(x) && c6.classList.contains(x) && c9.classList.contains(x)) {
+		else if (c3.classList.contains(x) && c6.classList.contains(x) && c9.classList.contains(x)) {
 			alert("X You Won!");
 		}
-		if (c1.classList.contains(x) && c2.classList.contains(x) && c3.classList.contains(x)) {
+		else if (c1.classList.contains(x) && c2.classList.contains(x) && c3.classList.contains(x)) {
 			alert("X You Won!");
 		}
-		if (c4.classList.contains(x) && c5.classList.contains(x) && c6.classList.contains(x)) {
+		else if (c4.classList.contains(x) && c5.classList.contains(x) && c6.classList.contains(x)) {
 			alert("X You Won!");
 		}
-		if (c7.classList.contains(x) && c8.classList.contains(x) && c9.classList.contains(x)) {
+		else if (c7.classList.contains(x) && c8.classList.contains(x) && c9.classList.contains(x)) {
 			alert("X You Won!");
 		}
-		if (c1.classList.contains(x) && c5.classList.contains(x) && c9.classList.contains(x)) {
+		else if (c1.classList.contains(x) && c5.classList.contains(x) && c9.classList.contains(x)) {
 			alert("X You Won!");
 		}
-		if (c3.classList.contains(x) && c5.classList.contains(x) && c7.classList.contains(x)) {
+		else if (c3.classList.contains(x) && c5.classList.contains(x) && c7.classList.contains(x)) {
 			alert("X You Won!");
 		}
 
 	// o check
-		if (c1.classList.contains(o) && c4.classList.contains(o) && c7.classList.contains(o)) {
+		else if (c1.classList.contains(o) && c4.classList.contains(o) && c7.classList.contains(o)) {
 			alert("O You Won!");
 		}
-		if (c2.classList.contains(o) && c5.classList.contains(o) && c8.classList.contains(o)) {
+		else if (c2.classList.contains(o) && c5.classList.contains(o) && c8.classList.contains(o)) {
 			alert("O You Won!");
 		}
-		if (c3.classList.contains(o) && c6.classList.contains(o) && c9.classList.contains(o)) {
+		else if (c3.classList.contains(o) && c6.classList.contains(o) && c9.classList.contains(o)) {
 			alert("O You Won!");
 		}
-		if (c1.classList.contains(o) && c2.classList.contains(o) && c3.classList.contains(o)) {
+		else if (c1.classList.contains(o) && c2.classList.contains(o) && c3.classList.contains(o)) {
 			alert("O You Won!");
 		}
-		if (c4.classList.contains(o) && c5.classList.contains(o) && c6.classList.contains(o)) {
+		else if (c4.classList.contains(o) && c5.classList.contains(o) && c6.classList.contains(o)) {
 			alert("O You Won!");
 		}
-		if (c7.classList.contains(o) && c8.classList.contains(o) && c9.classList.contains(o)) {
+		else if (c7.classList.contains(o) && c8.classList.contains(o) && c9.classList.contains(o)) {
 			alert("O You Won!");
 		}
-		if (c1.classList.contains(o) && c5.classList.contains(o) && c9.classList.contains(o)) {
+		else if (c1.classList.contains(o) && c5.classList.contains(o) && c9.classList.contains(o)) {
 			alert("O You Won!");
 		}
-		if (c3.classList.contains(o) && c5.classList.contains(o) && c7.classList.contains(o)) {
+		else if (c3.classList.contains(o) && c5.classList.contains(o) && c7.classList.contains(o)) {
 			alert("O You Won!");
 		}
 
-		if ( turn == 9 ) {
+		else if ( turn == 9 ) {
 			alert("It is a Tie!");
 		}
 
@@ -135,8 +135,9 @@ function handleSingle (e) {
 		}
 		this.classList.add("x");
 		this.classList.add("filled");
-		compTurn();
 		winloseLogic();
+		compTurn();
+		
 	}
 
 
@@ -146,15 +147,15 @@ function handleSingle (e) {
 		var spaceNum = Math.floor((Math.random() * 9) + 1);
 		var compSpace = document.getElementById(spaceNum.toString())
 		if (compSpace.classList.contains("filled")) {
-			compTurn()
-		}else  {
+			compTurn();
+		} else {
 			compSpace.classList.add("o")
 			compSpace.classList.add("filled")
 			turn++;
 		}
 	}
-	
-	
+
+
 	function winloseLogic() {
 		// grab Elements and name 
 		var c1 = document.getElementById("1");
@@ -173,55 +174,55 @@ function handleSingle (e) {
 		if (c1.classList.contains(x) && c4.classList.contains(x) && c7.classList.contains(x)) {
 			alert("X You Won!");
 		}
-		if (c2.classList.contains(x) && c5.classList.contains(x) && c8.classList.contains(x)) {
+		else if (c2.classList.contains(x) && c5.classList.contains(x) && c8.classList.contains(x)) {
 			alert("X You Won!");
 		}
-		if (c3.classList.contains(x) && c6.classList.contains(x) && c9.classList.contains(x)) {
+		else if (c3.classList.contains(x) && c6.classList.contains(x) && c9.classList.contains(x)) {
 			alert("X You Won!");
 		}
-		if (c1.classList.contains(x) && c2.classList.contains(x) && c3.classList.contains(x)) {
+		else if (c1.classList.contains(x) && c2.classList.contains(x) && c3.classList.contains(x)) {
 			alert("X You Won!");
 		}
-		if (c4.classList.contains(x) && c5.classList.contains(x) && c6.classList.contains(x)) {
+		else if (c4.classList.contains(x) && c5.classList.contains(x) && c6.classList.contains(x)) {
 			alert("X You Won!");
 		}
-		if (c7.classList.contains(x) && c8.classList.contains(x) && c9.classList.contains(x)) {
+		else if (c7.classList.contains(x) && c8.classList.contains(x) && c9.classList.contains(x)) {
 			alert("X You Won!");
 		}
-		if (c1.classList.contains(x) && c5.classList.contains(x) && c9.classList.contains(x)) {
+		else if (c1.classList.contains(x) && c5.classList.contains(x) && c9.classList.contains(x)) {
 			alert("X You Won!");
 		}
-		if (c3.classList.contains(x) && c5.classList.contains(x) && c7.classList.contains(x)) {
+		else if (c3.classList.contains(x) && c5.classList.contains(x) && c7.classList.contains(x)) {
 			alert("X You Won!");
 		}
 
 	// o check
-		if (c1.classList.contains(o) && c4.classList.contains(o) && c7.classList.contains(o)) {
+		else if (c1.classList.contains(o) && c4.classList.contains(o) && c7.classList.contains(o)) {
 			alert("O You Won!");
 		}
-		if (c2.classList.contains(o) && c5.classList.contains(o) && c8.classList.contains(o)) {
+		else if (c2.classList.contains(o) && c5.classList.contains(o) && c8.classList.contains(o)) {
 			alert("O You Won!");
 		}
-		if (c3.classList.contains(o) && c6.classList.contains(o) && c9.classList.contains(o)) {
+		else if (c3.classList.contains(o) && c6.classList.contains(o) && c9.classList.contains(o)) {
 			alert("O You Won!");
 		}
-		if (c1.classList.contains(o) && c2.classList.contains(o) && c3.classList.contains(o)) {
+		else if (c1.classList.contains(o) && c2.classList.contains(o) && c3.classList.contains(o)) {
 			alert("O You Won!");
 		}
-		if (c4.classList.contains(o) && c5.classList.contains(o) && c6.classList.contains(o)) {
+		else if (c4.classList.contains(o) && c5.classList.contains(o) && c6.classList.contains(o)) {
 			alert("O You Won!");
 		}
-		if (c7.classList.contains(o) && c8.classList.contains(o) && c9.classList.contains(o)) {
+		else if (c7.classList.contains(o) && c8.classList.contains(o) && c9.classList.contains(o)) {
 			alert("O You Won!");
 		}
-		if (c1.classList.contains(o) && c5.classList.contains(o) && c9.classList.contains(o)) {
+		else if (c1.classList.contains(o) && c5.classList.contains(o) && c9.classList.contains(o)) {
 			alert("O You Won!");
 		}
-		if (c3.classList.contains(o) && c5.classList.contains(o) && c7.classList.contains(o)) {
+		else if (c3.classList.contains(o) && c5.classList.contains(o) && c7.classList.contains(o)) {
 			alert("O You Won!");
 		}
 
-		if ( turn > 9 ) {
+		else if ( turn == 9 ) {
 			alert("It is a Tie!");
 		}
 
