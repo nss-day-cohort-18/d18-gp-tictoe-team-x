@@ -8,6 +8,7 @@ var menu = document.getElementById("menu")
 
 // Turn Counter
 var turn = 0;
+var stillPlay = true;
 
 // Adding Event Listeners
 
@@ -135,9 +136,10 @@ function handleSingle (e) {
 		}
 		this.classList.add("x");
 		this.classList.add("filled");
-		winloseLogic();
-		compTurn();
-		
+		winloseLogic()
+		if (stillPlay) {
+			compTurn();
+		}	
 	}
 
 
@@ -169,61 +171,78 @@ function handleSingle (e) {
 		var c9 = document.getElementById("9");
 		var x = "x";
 		var o = "o";
-
-	// X 
+		
+		// X 
 		if (c1.classList.contains(x) && c4.classList.contains(x) && c7.classList.contains(x)) {
+			stillPlay = false;			
 			alert("X You Won!");
 		}
 		else if (c2.classList.contains(x) && c5.classList.contains(x) && c8.classList.contains(x)) {
+			stillPlay = false;			
 			alert("X You Won!");
 		}
 		else if (c3.classList.contains(x) && c6.classList.contains(x) && c9.classList.contains(x)) {
+			stillPlay = false;			
 			alert("X You Won!");
 		}
 		else if (c1.classList.contains(x) && c2.classList.contains(x) && c3.classList.contains(x)) {
+			stillPlay = false;			
 			alert("X You Won!");
 		}
 		else if (c4.classList.contains(x) && c5.classList.contains(x) && c6.classList.contains(x)) {
+			stillPlay = false;			
 			alert("X You Won!");
 		}
 		else if (c7.classList.contains(x) && c8.classList.contains(x) && c9.classList.contains(x)) {
+			stillPlay = false;			
 			alert("X You Won!");
 		}
 		else if (c1.classList.contains(x) && c5.classList.contains(x) && c9.classList.contains(x)) {
+			stillPlay = false;			
 			alert("X You Won!");
 		}
 		else if (c3.classList.contains(x) && c5.classList.contains(x) && c7.classList.contains(x)) {
+			stillPlay = false;			
 			alert("X You Won!");
 		}
 
 	// o check
 		else if (c1.classList.contains(o) && c4.classList.contains(o) && c7.classList.contains(o)) {
-			alert("O You Won!");
+			stillPlay = false;			
+			alert("X You Won!");
 		}
 		else if (c2.classList.contains(o) && c5.classList.contains(o) && c8.classList.contains(o)) {
-			alert("O You Won!");
+			stillPlay = false;			
+			alert("X You Won!");
 		}
 		else if (c3.classList.contains(o) && c6.classList.contains(o) && c9.classList.contains(o)) {
-			alert("O You Won!");
+			stillPlay = false;			
+			alert("X You Won!");
 		}
 		else if (c1.classList.contains(o) && c2.classList.contains(o) && c3.classList.contains(o)) {
-			alert("O You Won!");
+			stillPlay = false;			
+			alert("X You Won!");
 		}
 		else if (c4.classList.contains(o) && c5.classList.contains(o) && c6.classList.contains(o)) {
-			alert("O You Won!");
+			stillPlay = false;			
+			alert("X You Won!");
 		}
 		else if (c7.classList.contains(o) && c8.classList.contains(o) && c9.classList.contains(o)) {
-			alert("O You Won!");
+			stillPlay = false;			
+			alert("X You Won!");
 		}
 		else if (c1.classList.contains(o) && c5.classList.contains(o) && c9.classList.contains(o)) {
-			alert("O You Won!");
+			stillPlay = false;			
+			alert("X You Won!");
 		}
 		else if (c3.classList.contains(o) && c5.classList.contains(o) && c7.classList.contains(o)) {
-			alert("O You Won!");
+			stillPlay = false;			
+			alert("X You Won!");
 		}
 
 		else if ( turn == 9 ) {
-			alert("It is a Tie!");
+			stillPlay = false;			
+			alert("X You Won!");
 		}
 
 	}
