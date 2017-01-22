@@ -6,24 +6,32 @@ var oPlayButton = document.getElementById("oPlayButton")
 var tiePlayButton = document.getElementById("tiePlayButton")
 var singleButton = document.getElementById("singleButton")
 var multiButton = document.getElementById("multiButton")
-var menu = document.getElementById("menu")
 
 
 
 // Turn Counter
 var turn = 0;
-var stillPlay = true;
+var stillPlay = false;
+
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover(); 
+});
+
 
 // Adding Event Listeners
-
-
 singleButton.addEventListener("click", handleSingle)
 multiButton.addEventListener("click", handleMulti)
+
+
+
+
 
 
 //Multiplayer function
 function handleMulti (e) {
 	selectPlayButton.classList.add("hidden")
+	stillPlay = true;
+	$('[data-toggle="popover"]').popover("disable"); 
 	for (i = 0; i < card.length; i++) {
 		card.item(i).addEventListener("click", handleClass);
 	}
@@ -134,6 +142,8 @@ function handleMulti (e) {
 //Singleplayer functions
 function handleSingle (e) {
 	selectPlayButton.classList.add("hidden")
+	stillPlay = true;
+	$('[data-toggle="popover"]').popover("disable"); 
 	for (i = 0; i < card.length; i++) {
 		card.item(i).addEventListener("click", handleClass);
 	}
@@ -185,57 +195,74 @@ function handleSingle (e) {
 
 	// X 
 		if (c1.classList.contains(x) && c4.classList.contains(x) && c7.classList.contains(x)) {
+			stillPlay = false;
 			$('#xWin').modal("show");
 		}
 		else if (c2.classList.contains(x) && c5.classList.contains(x) && c8.classList.contains(x)) {
+			stillPlay = false;
 			$('#xWin').modal("show");
 		}
 		else if (c3.classList.contains(x) && c6.classList.contains(x) && c9.classList.contains(x)) {
+			stillPlay = false;
 			$('#xWin').modal("show");
 		}
 		else if (c1.classList.contains(x) && c2.classList.contains(x) && c3.classList.contains(x)) {
+			stillPlay = false;
 			$('#xWin').modal("show");
 		}
 		else if (c4.classList.contains(x) && c5.classList.contains(x) && c6.classList.contains(x)) {
+			stillPlay = false;
 			$('#xWin').modal("show");
 		}
 		else if (c7.classList.contains(x) && c8.classList.contains(x) && c9.classList.contains(x)) {
+			stillPlay = false;
 			$('#xWin').modal("show");
 		}
 		else if (c1.classList.contains(x) && c5.classList.contains(x) && c9.classList.contains(x)) {
+			stillPlay = false;
 			$('#xWin').modal("show");
 		}
 		else if (c3.classList.contains(x) && c5.classList.contains(x) && c7.classList.contains(x)) {
+			stillPlay = false;
 			$('#xWin').modal("show");
 		}
 
 	// o check
 		else if (c1.classList.contains(o) && c4.classList.contains(o) && c7.classList.contains(o)) {
+			stillPlay = false;
 			$('#oWin').modal("show");
 		}
 		else if (c2.classList.contains(o) && c5.classList.contains(o) && c8.classList.contains(o)) {
+			stillPlay = false;
 			$('#oWin').modal("show");
 		}
 		else if (c3.classList.contains(o) && c6.classList.contains(o) && c9.classList.contains(o)) {
+			stillPlay = false;
 			$('#oWin').modal("show");
 		}
 		else if (c1.classList.contains(o) && c2.classList.contains(o) && c3.classList.contains(o)) {
+			stillPlay = false;
 			$('#oWin').modal("show");
 		}
 		else if (c4.classList.contains(o) && c5.classList.contains(o) && c6.classList.contains(o)) {
+			stillPlay = false;
 			$('#oWin').modal("show");
 		}
 		else if (c7.classList.contains(o) && c8.classList.contains(o) && c9.classList.contains(o)) {
+			stillPlay = false;
 			$('#oWin').modal("show");
 		}
 		else if (c1.classList.contains(o) && c5.classList.contains(o) && c9.classList.contains(o)) {
+			stillPlay = false;
 			$('#oWin').modal("show");
 		}
 		else if (c3.classList.contains(o) && c5.classList.contains(o) && c7.classList.contains(o)) {
+			stillPlay = false;
 			$('#oWin').modal("show");
 		}
 
 		else if ( turn == 9 ) {
+			stillPlay = false;
 			$('#catGame').modal("show");
 		}
 
@@ -254,4 +281,5 @@ function handleSingle (e) {
 		window.location.reload();
 	}
 }
+
 
