@@ -6,6 +6,8 @@ var singleButton = document.getElementById("singleButton")
 var multiButton = document.getElementById("multiButton")
 var menu = document.getElementById("menu")
 
+
+
 // Turn Counter
 var turn = 0;
 var stillPlay = true;
@@ -249,13 +251,15 @@ function handleSingle (e) {
 	//Play again reload
 	playButton.addEventListener("click", handleReload)
 	function handleReload (e) {
-		window.location.reload();
+		window.location.reload()
 	}
 }
 
 
 
-
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').focus()
+})
 
 
 
