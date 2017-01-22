@@ -1,7 +1,9 @@
 // Assigning Variable to Elements
 var card = document.getElementsByClassName("card");
 var playView = document.getElementById("playView");
-var playButton = document.getElementById("playButton")
+var xPlayButton = document.getElementById("xPlayButton")
+var oPlayButton = document.getElementById("oPlayButton")
+var tiePlayButton = document.getElementById("tiePlayButton")
 var singleButton = document.getElementById("singleButton")
 var multiButton = document.getElementById("multiButton")
 var menu = document.getElementById("menu")
@@ -22,7 +24,7 @@ multiButton.addEventListener("click", handleMulti)
 //Multiplayer function
 function handleMulti (e) {
 	playView.classList.remove("hidden")
-	menu.classList.add("hidden")
+	// menu.classList.add("hidden")
 	for (i = 0; i < card.length; i++) {
 		card.item(i).addEventListener("click", handleClass);
 	}
@@ -30,7 +32,7 @@ function handleMulti (e) {
 	function handleClass(event) {
 		turn++;
 		if (this.classList.contains("filled")) {
-			alert("THIS SPACE IS TAKEN! CLICK SOMEWHERE ELSE!!!");
+			$('#noCheat').modal("show");
 			turn--;
 		}
 		else if (turn%2 !== 0) {
@@ -59,63 +61,71 @@ function handleMulti (e) {
 
 	// X 
 		if (c1.classList.contains(x) && c4.classList.contains(x) && c7.classList.contains(x)) {
-			alert("X You Won!");
+			$('#xWin').modal("show");
 		}
 		else if (c2.classList.contains(x) && c5.classList.contains(x) && c8.classList.contains(x)) {
-			alert("X You Won!");
+			$('#xWin').modal("show");
 		}
 		else if (c3.classList.contains(x) && c6.classList.contains(x) && c9.classList.contains(x)) {
-			alert("X You Won!");
+			$('#xWin').modal("show");
 		}
 		else if (c1.classList.contains(x) && c2.classList.contains(x) && c3.classList.contains(x)) {
-			alert("X You Won!");
+			$('#xWin').modal("show");
 		}
 		else if (c4.classList.contains(x) && c5.classList.contains(x) && c6.classList.contains(x)) {
-			alert("X You Won!");
+			$('#xWin').modal("show");
 		}
 		else if (c7.classList.contains(x) && c8.classList.contains(x) && c9.classList.contains(x)) {
-			alert("X You Won!");
+			$('#xWin').modal("show");
 		}
 		else if (c1.classList.contains(x) && c5.classList.contains(x) && c9.classList.contains(x)) {
-			alert("X You Won!");
+			$('#xWin').modal("show");
 		}
 		else if (c3.classList.contains(x) && c5.classList.contains(x) && c7.classList.contains(x)) {
-			alert("X You Won!");
+			$('#xWin').modal("show");
 		}
 
 	// o check
 		else if (c1.classList.contains(o) && c4.classList.contains(o) && c7.classList.contains(o)) {
-			alert("O You Won!");
+			$('#oWin').modal("show");
 		}
 		else if (c2.classList.contains(o) && c5.classList.contains(o) && c8.classList.contains(o)) {
-			alert("O You Won!");
+			$('#oWin').modal("show");
 		}
 		else if (c3.classList.contains(o) && c6.classList.contains(o) && c9.classList.contains(o)) {
-			alert("O You Won!");
+			$('#oWin').modal("show");
 		}
 		else if (c1.classList.contains(o) && c2.classList.contains(o) && c3.classList.contains(o)) {
-			alert("O You Won!");
+			$('#oWin').modal("show");
 		}
 		else if (c4.classList.contains(o) && c5.classList.contains(o) && c6.classList.contains(o)) {
-			alert("O You Won!");
+			$('#oWin').modal("show");
 		}
 		else if (c7.classList.contains(o) && c8.classList.contains(o) && c9.classList.contains(o)) {
-			alert("O You Won!");
+			$('#oWin').modal("show");
 		}
 		else if (c1.classList.contains(o) && c5.classList.contains(o) && c9.classList.contains(o)) {
-			alert("O You Won!");
+			$('#oWin').modal("show");
 		}
 		else if (c3.classList.contains(o) && c5.classList.contains(o) && c7.classList.contains(o)) {
-			alert("O You Won!");
+			$('#oWin').modal("show");
 		}
 
 		else if ( turn == 9 ) {
-			alert("It is a Tie!");
+			$('#catGame').modal("show");
 		}
 
 	}
 	//Play again reload
-	playButton.addEventListener("click", handleReload)
+	xPlayButton.addEventListener("click", handleReload)
+	function handleReload (e) {
+		window.location.reload();
+	}
+	oPlayButton.addEventListener("click", handleReload)
+	function handleReload (e) {
+		window.location.reload();
+	}
+	tiePlayButton.addEventListener("click", handleReload)
 	function handleReload (e) {
 		window.location.reload();
 	}
@@ -125,7 +135,7 @@ function handleMulti (e) {
 //Singleplayer functions
 function handleSingle (e) {
 	playView.classList.remove("hidden")
-	menu.classList.add("hidden")
+	// menu.classList.add("hidden")
 	for (i = 0; i < card.length; i++) {
 		card.item(i).addEventListener("click", handleClass);
 	}
@@ -133,7 +143,7 @@ function handleSingle (e) {
 	function handleClass(event) {
 		turn++;
 		if (this.classList.contains("filled")) {
-			alert("THIS SPACE IS TAKEN! CLICK SOMEWHERE ELSE!!!");
+			$('#noCheat').modal("show");
 			turn--;
 		}
 		this.classList.add("x");
@@ -141,6 +151,7 @@ function handleSingle (e) {
 		winloseLogic()
 		if (stillPlay) {
 			compTurn();
+			winloseLogic();
 		}	
 	}
 
@@ -173,103 +184,76 @@ function handleSingle (e) {
 		var c9 = document.getElementById("9");
 		var x = "x";
 		var o = "o";
-		
-		// X 
+
+	// X 
 		if (c1.classList.contains(x) && c4.classList.contains(x) && c7.classList.contains(x)) {
-			stillPlay = false;			
-			alert("X You Won!");
+			$('#xWin').modal("show");
 		}
 		else if (c2.classList.contains(x) && c5.classList.contains(x) && c8.classList.contains(x)) {
-			stillPlay = false;			
-			alert("X You Won!");
+			$('#xWin').modal("show");
 		}
 		else if (c3.classList.contains(x) && c6.classList.contains(x) && c9.classList.contains(x)) {
-			stillPlay = false;			
-			alert("X You Won!");
+			$('#xWin').modal("show");
 		}
 		else if (c1.classList.contains(x) && c2.classList.contains(x) && c3.classList.contains(x)) {
-			stillPlay = false;			
-			alert("X You Won!");
+			$('#xWin').modal("show");
 		}
 		else if (c4.classList.contains(x) && c5.classList.contains(x) && c6.classList.contains(x)) {
-			stillPlay = false;			
-			alert("X You Won!");
+			$('#xWin').modal("show");
 		}
 		else if (c7.classList.contains(x) && c8.classList.contains(x) && c9.classList.contains(x)) {
-			stillPlay = false;			
-			alert("X You Won!");
+			$('#xWin').modal("show");
 		}
 		else if (c1.classList.contains(x) && c5.classList.contains(x) && c9.classList.contains(x)) {
-			stillPlay = false;			
-			alert("X You Won!");
+			$('#xWin').modal("show");
 		}
 		else if (c3.classList.contains(x) && c5.classList.contains(x) && c7.classList.contains(x)) {
-			stillPlay = false;			
-			alert("X You Won!");
+			$('#xWin').modal("show");
 		}
 
 	// o check
 		else if (c1.classList.contains(o) && c4.classList.contains(o) && c7.classList.contains(o)) {
-			stillPlay = false;			
-			alert("O You Won!");
+			$('#oWin').modal("show");
 		}
 		else if (c2.classList.contains(o) && c5.classList.contains(o) && c8.classList.contains(o)) {
-			stillPlay = false;			
-			alert("O You Won!");
+			$('#oWin').modal("show");
 		}
 		else if (c3.classList.contains(o) && c6.classList.contains(o) && c9.classList.contains(o)) {
-			stillPlay = false;			
-			alert("O You Won!");
+			$('#oWin').modal("show");
 		}
 		else if (c1.classList.contains(o) && c2.classList.contains(o) && c3.classList.contains(o)) {
-			stillPlay = false;			
-			alert("O You Won!");
+			$('#oWin').modal("show");
 		}
 		else if (c4.classList.contains(o) && c5.classList.contains(o) && c6.classList.contains(o)) {
-			stillPlay = false;			
-			alert("O You Won!");
+			$('#oWin').modal("show");
 		}
 		else if (c7.classList.contains(o) && c8.classList.contains(o) && c9.classList.contains(o)) {
-			stillPlay = false;			
-			alert("O You Won!");
+			$('#oWin').modal("show");
 		}
 		else if (c1.classList.contains(o) && c5.classList.contains(o) && c9.classList.contains(o)) {
-			stillPlay = false;			
-			alert("O You Won!");
+			$('#oWin').modal("show");
 		}
 		else if (c3.classList.contains(o) && c5.classList.contains(o) && c7.classList.contains(o)) {
-			stillPlay = false;			
-			alert("O You Won!");
+			$('#oWin').modal("show");
 		}
 
 		else if ( turn == 9 ) {
-			stillPlay = false;			
-			alert("It's a Tie!");
+			$('#catGame').modal("show");
 		}
 
 	}
 	//Play again reload
-	playButton.addEventListener("click", handleReload)
+	xPlayButton.addEventListener("click", handleReload)
 	function handleReload (e) {
-		window.location.reload()
+		window.location.reload();
+	}
+	oPlayButton.addEventListener("click", handleReload)
+	function handleReload (e) {
+		window.location.reload();
+	}
+	tiePlayButton.addEventListener("click", handleReload)
+	function handleReload (e) {
+		window.location.reload();
 	}
 }
-
-
-
-$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').focus()
-})
-
-
-
-
-
-
-
-
-
-
-
-
 

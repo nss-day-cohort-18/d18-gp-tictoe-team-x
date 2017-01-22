@@ -3,20 +3,31 @@
 	flex-flow: column nowrap;
 	justify-content: center;
 	align-items: center;
-	background-color: #b4e7a2
+	background-color: #ccffcc;
 }
 
-.container {
+.row-container {
 	display: flex;
 	flex-flow: row nowrap;
-
 }
+
+
+
+#playView {
+	margin: 2em;
+}
+
+
 
 h1 {
 	font-family: 'Trocchi', serif;
 	font-size: 3em;
 	margin-top: .5em;
 	padding-bottom: 0;
+}
+
+.modal-body {
+	font-family: 'Quicksand', sans-serif;
 }
 
 h3 {
@@ -40,21 +51,11 @@ aside {
 	display: flex;
 	flex-direction: column;
 }
-/*
+
 button {
-	height: 3em;
-	width: 7em;
-	margin-top: .5em;
-	text-align: center;
 	font-family: 'Quicksand', sans-serif;
-	border: .08em solid #000;
-	border-radius: 32px;
-	background-color: #5a834d;
-	font-size: 3em;
-	font-weight: bold;
-	color: #fff;
 }
-*/
+
 
 .hidden {
 	display: none;
@@ -111,9 +112,58 @@ button {
 	border-top: 3px solid #000;
 	border-left: 3px solid #000;
 }
-
-
-
+.modal-header-success {
+	font-family: 'Trocchi', serif;
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #5cb85c;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
+.modal-header-warning {
+	font-family: 'Trocchi', serif;
+	color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #f0ad4e;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
+.modal-header-danger {
+	font-family: 'Trocchi', serif;
+	color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #d9534f;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
+.modal-header-primary {
+	font-family: 'Trocchi', serif;
+	color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #428bca;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
 
 
 

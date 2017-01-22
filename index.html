@@ -14,32 +14,95 @@
 
 </head>
 <body class="body-container">
-	<h1>Let's Play Tic-Tac-Toe!</h1>
+	<h1>Tic-Tac-Toe!</h1>
 	<aside>(X's always go first)</aside>
 		<!-- Button trigger modal -->
-	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-	  Launch demo modal
+	<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#playView">
+	  Select Play Mode
 	</button>
 
 	<!-- Modal -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	  <div class="modal-dialog" role="document">
+	<div class="modal fade" id="playView" tabindex="-1" role="dialog" aria-labelledby="playView">
+	  <div class="modal-dialog modal-sm" role="document">
 	    <div class="modal-content">
-	      <div class="modal-header">
+	      <div class="modal-header-success">
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+	        <h4 class="modal-title" id="myModalLabel">Selecting How To Play:</h4>
 	      </div>
 	      <div class="modal-body">
-	        ...
+	        Here you can select if you would like to play Singleplayer against the computer or Multiplayer with a friend.
 	      </div>
 	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	        <button type="button" class="btn btn-primary">Save changes</button>
+	        <button type="button" class="btn btn-primary" data-dismiss="modal" id="singleButton">Singleplayer</button>
+	        <button type="button" class="btn btn-info" data-dismiss="modal" id="multiButton">Multiplayer</button>
 	      </div>
 	    </div>
 	  </div>
 	</div>
-
+	<div class="modal fade" id="xWin" tabindex="-1" role="dialog">
+	  <div class="modal-dialog modal-sm" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header-danger">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">Wow, X's WON!!</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>You think you can win again?  You should click below to PLAY AGAIN!!!!!</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" id="xPlayButton" class="btn btn-danger">Play Again</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<div class="modal fade" id="oWin" tabindex="-1" role="dialog">
+	  <div class="modal-dialog modal-sm" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header-primary">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">Booya! O's Win!!</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>Wow, I can't believe it... You should click below to PLAY AGAIN!!!!!</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" id="oPlayButton" class="btn btn-primary">Play Again</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<div class="modal fade" id="catGame" tabindex="-1" role="dialog">
+	  <div class="modal-dialog modal-sm" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header-warning">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">It's a TIE</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>Looks like the cat won this game.  You should click below to PLAY AGAIN!!!!!</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" id="tiePlayButton" class="btn btn-warning">Play Again</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<div class="modal fade" id="noCheat" tabindex="-1" role="dialog">
+	  <div class="modal-dialog modal-sm" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header-warning">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">YOU CAN'T GO THERE</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>Click on an empty space!</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Try Again...</span></button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 
 <!-- 	<div class="body-container" id="menu">
 		<h3>Would you like to play singleplayer or multiplayer?</h3>
@@ -47,15 +110,15 @@
 		<button type="button" id="multiButton">Multiplayer</button>
 	</div> -->
 	<div class="body-container" id="playView">
-		<div class="container">
-			<section id="1" class="card ">
+		<div class="row-container">
+			<section id="1" class="card">
 			</section>
 			<section id="2" class="card">
 			</section>
 			<section id="3" class="card">
 			</section>
 		</div>
-		<div class="container">
+		<div class="row-container">
 			<section id="4" class="card">
 			</section>
 			<section id="5" class="card">
@@ -63,16 +126,16 @@
 			<section id="6" class="card">
 			</section>
 		</div>
-		<div class="container">
+		<div class="row-container">
 			<section id="7" class="card">
 			</section>
 			<section id="8" class="card">
 			</section>
 			<section id="9" class="card">
 			</section>
+<!-- 	</div>
+			<button Ltype="button" class="btn btn-lg btn-success">Play Again!</button>
 		</div>
-		<button type="button" id="playButton">Play Again!</button>
-	</div>
-<script type="text/javascript" src="js/tictoe.js"></script>
+ --><script type="text/javascript" src="js/tictoe.js"></script>
 </body>
 </html>
