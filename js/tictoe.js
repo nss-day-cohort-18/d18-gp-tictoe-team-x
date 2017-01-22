@@ -23,8 +23,7 @@ multiButton.addEventListener("click", handleMulti)
 
 //Multiplayer function
 function handleMulti (e) {
-	playView.classList.remove("hidden")
-	// menu.classList.add("hidden")
+	selectPlayButton.classList.add("hidden")
 	for (i = 0; i < card.length; i++) {
 		card.item(i).addEventListener("click", handleClass);
 	}
@@ -134,8 +133,7 @@ function handleMulti (e) {
 
 //Singleplayer functions
 function handleSingle (e) {
-	playView.classList.remove("hidden")
-	// menu.classList.add("hidden")
+	selectPlayButton.classList.add("hidden")
 	for (i = 0; i < card.length; i++) {
 		card.item(i).addEventListener("click", handleClass);
 	}
