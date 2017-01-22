@@ -17,7 +17,7 @@
 	<h1>Tic-Tac-Toe!</h1>
 	<aside>(X's always go first)</aside>
 		<!-- Button trigger modal -->
-	<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#playView">
+	<button type="button" id="selectPlayButton" class="btn btn-success btn-lg" data-toggle="modal" data-target="#playView">
 	  Select Play Mode
 	</button>
 
@@ -109,7 +109,7 @@
 		<button type="button" id="singleButton">Singleplayer</button>
 		<button type="button" id="multiButton">Multiplayer</button>
 	</div> -->
-	<div class="body-container" id="playView">
+	<div class="body-container" id="playView"  data-toggle="popover" title="Click 'Select Play Mode' Above" data-content="You have to select a game mode before you can play!">
 		<div class="row-container">
 			<section id="1" class="card">
 			</section>
